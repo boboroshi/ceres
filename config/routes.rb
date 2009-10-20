@@ -1,4 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => "content", :action => "home"
+
+  map.with_options(:controller => "content") do |content_map|
+    content_map.help        'help',               :action => 'help'
+    content_map.placeholder 'placeholder/:name',  :action => 'placeholder'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
