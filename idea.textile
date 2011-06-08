@@ -11,12 +11,17 @@ weather (date, high, low, precipitation)
 chemical (wrong word)
 mixes (wrong word) have many chemicals
 
+treatments (chemical/mix on a planting/bed)
+
 journal (garden journal)
 rss feed for journal
 comments on journal
 
 export to iCal for planting, harvest, etc.
 moon phases?
+
+database:
+http://www.pfaf.org/user/default.aspx
 
 h2. Seed data
 
