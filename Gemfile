@@ -3,20 +3,20 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL as the database for Active Record
+gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'compass-rails'
+  gem 'uglifier', '>= 1.3.0'
+  gem 'coffee-rails', '~> 4.0.0'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', platforms: :ruby
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,3 +43,33 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Gems only used in development
+group :development do
+  gem 'brakeman', require: false
+  gem "better_errors", "~> 0.7.0"
+  gem "binding_of_caller", "~> 0.7.1"
+  gem "meta_request", "~> 0.2.2"
+  gem 'rails_best_practices'
+
+  gem 'rb-fsevent'
+  gem 'growl'
+
+  # Deploy with Capistrano
+  gem 'capistrano', "< 2.14"
+end
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'mocha'
+end
+
+gem 'country_select'
+gem 'pry'
+gem 'sidekiq'
+gem 'simple_form'
