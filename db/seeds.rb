@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+puts "Adding plant statuses"
+Status.delete_all
 statuses = Status.create(
   [
     { name: 'Annual' },
@@ -14,6 +16,8 @@ statuses = Status.create(
   ]
 )
 
+puts "Adding seed sources..."
+Source.delete_all
 sources = Source.create (
   [
     {
@@ -59,3 +63,12 @@ sources = Source.create (
 
   ]
 )
+
+puts "Adding plant families..."
+Family.delete_all
+open(Rails.root + "db/seeds/plant_families.txt") do |pf|
+  pf.read.each_line do |family|
+    name = family
+    Family.create!(:name => name)
+  end
+end
