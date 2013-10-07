@@ -13,3 +13,49 @@ statuses = Status.create(
     { name: 'Perennial' }
   ]
 )
+
+sources = Source.create (
+  [
+    {
+      name: 'Baker Creek Heirloom Seeds',
+      url: 'http://www.rareseeds.com',
+      email: 'seeds@rareseeds.com',
+      telephone: '417.924.8917',
+      address: 'Baker Creek Heirloom Seed Co.<br>2278 Baker Creek Road<br>Mansfield, MO 65704',
+      notes: ''
+    },
+    {
+      name: 'High Mowing Organic Seeds',
+      url: 'http://www.highmowingseeds.com',
+      email: '',
+      telephone: '802.472.6174',
+      address: 'High Mowing Organic Seeds<br>76 Quarry Rd.<br>Wolcott, VT 05680',
+      notes: ''
+    },
+    {
+      name: 'Thomas Jefferson Center of Historic Plants',
+      url: 'http://www.monticello.org/site/house-and-gardens/thomas-jefferson-center-historic-plants',
+      email: 'chp@monticello.org',
+      telephone: '434.984.9819',
+      address: '1293 Milton Rd, Charlottesville, VA 22902',
+      notes: ''
+    },
+    {
+      name: 'Horizon Herbs',
+      url: 'http://www.horizonherbs.com',
+      email: '',
+      telephone: '541.846.6704',
+      address: 'Horizon Herbs, LLC<br>PO Box 69<br>Williams, OR 97544',
+      notes: ''
+    },
+    {
+      name: 'Johnny\'s Select Seeds',
+      url: 'http://www.johnnyseeds.com',
+      email: 'service@johnnyseeds.com',
+      telephone: '877.564.6697',
+      address: 'Johnny\'s Select Seeds<br>PO Box 299<br>Waterville, ME 04903',
+      notes: ''
+    }
+
+  ]
+)
